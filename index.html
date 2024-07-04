@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Indian Delicacy Restaurant</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+footer.w3-row-padding {
+  text-align: center;
+}
+footer.w3-row-padding > div {
+  display:inline;
+  vertical-align: top;
+  float: none; /* reset w3-third float */
+  margin: 10px;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">Contact</div>
+    <div class="w3-center w3-padding-16"><b>Desi Indian Restaurant</b></div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="naan.jpg" alt="Naan" style="width:100%">
+      <h3>Delicious Naan Bread</h3>
+      <p>Freshly baked naan bread, perfect for scooping up flavorful curries.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="biriyani.jpg" alt="Biryani" style="width:100%">
+      <h3>Spicy Biryani</h3>
+      <p>Aromatic rice dish with tender meat and a blend of spices.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="burger.jpg" alt="Samosa" style="width:100%">
+      <h3>Juicy Burger</h3>
+      <p>A mouth-watering burger with grilled patty, fresh vegetables, and tangy sauces.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="lassi.jpg" alt="Lassi" style="width:100%">
+      <h3>Refreshing Lassi</h3>
+      <p>Traditional yogurt-based drink, available in sweet or salty flavors.</p>
+    </div>
+  </div>
+  
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+  </div>
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About Us</h3><br>
+    <img src="restaurant.jpg" alt="Chef" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>Welcome to Desi Indian Restaurant</b></h4>
+      <h6><i>Passionate About Authentic Indian Cuisine</i></h6>
+      <p>At Indian Delicacy Restaurant, we bring the vibrant flavors of India to your table. Our menu features a diverse selection of traditional Indian dishes, including main courses, fast-food items, beverages, and desserts. Whether you're in the mood for a hearty biryani, crispy samosas, or a refreshing lassi, we have something to satisfy every craving. Join us for a culinary journey through India, where every dish is crafted with love and authenticity.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+  
+    <div class="w3-third">
+      <h3>BLOGS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="indian spices.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Exploring Indian Spices</span><br>
+          <span>Discover the rich flavors of Indian spices in our blog.</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="cooking.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Cooking Tips</span><br>
+          <span>Learn cooking tips and tricks from our expert chefs.</span>
+        </li> 
+      </ul>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "5d0dbbe4-6a23-45d6-8a7e-5c25de33d102", // The ID of this integration.
+    region: "eu-gb", // The region your integration is hosted in.
+    serviceInstanceID: "0e581c28-95d6-4b5d-b9aa-09cc16bb132e", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</body>
+</html>
